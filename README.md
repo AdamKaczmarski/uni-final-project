@@ -19,6 +19,7 @@
 Communication Performance Comparison Between JSON and Binary Encoded Objects
 ============
 This is my submission for the Individual Project in the 3rd year @ City, University of London.\
+The project has achieved a mark of 85%.\
 Author: [Adam Kaczmarski](https://github.com/AdamKaczmarski)
 
 
