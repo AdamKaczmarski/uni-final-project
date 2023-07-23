@@ -1,21 +1,20 @@
----
-abstract: |
-  The research compares the deserialization performance of textual and
-  binary formats using different programming languages. The components
-  communicate with each other to obtain the data and measure their
-  deserialization times. Alongside the author mentions the drawbacks of
-  the most popular standard and looks for an alternative approach.\
-  The comparisons are conducted on two layers of a regular tech stack -
-  back-end and front-end. The backend contrasts two compiled languages -
-  Java and Rust. The frontend utilizes TypeScript.
-author:
-- Adam Kaczmarski
-bibliography:
-- biblio.bib
-title: Communication Performance Comparison Between JSON and Binary
-  Encoded Objects
----
-
+<!-- --- -->
+<!-- abstract: | -->
+<!--   The research compares the deserialization performance of textual and -->
+<!--   binary formats using different programming languages. The components -->
+<!--   communicate with each other to obtain the data and measure their -->
+<!--   deserialization times. Alongside the author mentions the drawbacks of -->
+<!--   the most popular standard and looks for an alternative approach.\ -->
+<!--   The comparisons are conducted on two layers of a regular tech stack - -->
+<!--   back-end and front-end. The backend contrasts two compiled languages - -->
+<!--   Java and Rust. The frontend utilizes TypeScript. -->
+<!-- author: -->
+<!-- - Adam Kaczmarski -->
+<!-- bibliography: -->
+<!-- - biblio.bib -->
+<!-- title: Communication Performance Comparison Between JSON and Binary -->
+<!--   Encoded Objects -->
+<!-- --- -->
 
 Communication Performance Comparison Between JSON and Binary Encoded Objects
 ============
