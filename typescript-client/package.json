@@ -1,0 +1,29 @@
+{
+  "name": "typescript-client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": ".",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.3.4",
+    "base-64": "^1.0.0",
+    "bson": "^5.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "utf8": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/base-64": "^1.0.0",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@types/utf8": "^3.0.1",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.1"
+  }
+}

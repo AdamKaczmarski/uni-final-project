@@ -1,0 +1,6 @@
+*.jar
+*.exe
+json-objects/
+node_modules/
+*.zip
+*.pdf

@@ -1,0 +1,67 @@
+services:
+  rust-server:
+    image: rust_server 
+    container_name: rust-server
+    ports:
+      - "8081:8081"
+    environment:
+      RUST_BACKTRACE: full
+      RS_SERVER_PORT: 8081
+    build:
+      context: rust_server 
+      dockerfile: Dockerfile 
+    networks:
+      - uninet
+  rust-server-provider:
+    image: rust_server 
+    container_name: rust-server-provider
+    ports:
+      - "8082:8082"
+    environment:
+      RUST_BACKTRACE: full
+      RS_SERVER_PORT: 8082
+    networks:
+      - uninet
+  java-server:
+    image: java-server 
+    container_name: java-server
+    ports:
+      - "8080:8080"
+    environment:
+      JV_SERVER_PORT: 8080
+    build:
+      context: java-server 
+      dockerfile: Dockerfile 
+    networks:
+      - uninet
+  java-server-provider:
+    image: java-server 
+    container_name: java-server-provider
+    ports:
+      - "8079:8079"
+    environment:
+      JV_SERVER_PORT: 8079
+    networks:
+      - uninet
+  #Apache httpd for the UI files and ProxyPass
+  #The UI is available at the localhost:8060 (port specified below)
+  typescript-client:
+    image: typescript_client
+    container_name: typescript-client
+    ports:
+      - "8060:80"
+    environment:
+       JAVA_PORT: 8080
+       RUST_PORT: 8081
+       JAVA_SERVER: java-server
+       RUST_SERVER: rust-server
+       APACHE_LISTEN_PORT: 80
+    build:
+      context: typescript-client 
+      dockerfile: Dockerfile 
+    networks:
+      - uninet
+        
+networks:
+  uninet:
+    driver: bridge
